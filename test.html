@@ -5,8 +5,13 @@
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $.ajax({url: "angular.html", success: function(result){
-            $("#div1").html(result);
+        $.ajax({url: "test.txt", 
+     		cache: false,
+     		contentType: "application/json; charset=utf-8",
+     		dataType: "json",
+     		type: "GET",
+        	success: function(result){
+            	$("#div1").html(result);
         }});
     });
 });

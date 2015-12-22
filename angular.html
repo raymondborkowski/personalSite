@@ -1,68 +1,13 @@
 <!DOCTYPE html> <!-- html5 code -->
-<html ng-app = "store" ng-controller="myCtrl">
+<html>
 	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	</head>
 	<body>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-		<script type = "text/javascript" src = "app.js"> </script>
-
-<!--NAVIGATION BAR -->
-
-		<nav class="navbar navbar-inverse">
-  			<div class="container-fluid">
-   				<div class="navbar-header">
-				  <a class="navbar-brand" href="#">Ray Borkowski</a>
-				</div>
-				<div>
-				  <ul class="nav navbar-nav">
-				    <li>
-				    	<a href="index.html">Home</a>
-				    </li>
-				    <li>
-				    	<a href="#">Resume</a>
-				    </li>
-				    <li>
-				    	<a href="#">GitHub</a>
-				    	</li> 
-				    <li>
-				    	<a href="#">Contact Form</a>
-				    </li> 
-				    <li class="active">
-				    	<a href="#" >Angular Examples</a>
-				    </li> 
-				  </ul>
-				  <ul class="nav navbar-nav navbar-right">
-				    <li>
-				    	<a href="#">
-				    		<span class="glyphicon glyphicon-user"></span> 
-				    		Sign Up
-				    	</a>
-				    </li>
-				    <li>
-				    	<a href="#">
-				    		<span class="glyphicon glyphicon-log-in"></span> 
-				    		Login
-				    	</a>
-				    </li>
-				  </ul>
-				</div>
-			</div>
-		</nav>
-
-<!-- END NAV BAR -->
-		<div id="div1"><h2>This is Angular Example Page</h2></div>
-		<script>
-		$(document).ready(function(){
-		    $("button").click(function(){
-		        $.ajax({
-		        	url: "index.html", 
-		        	success: function(result){
-		            	$("#div1").html(result);
-		       	}});
-		    });
-		});
-		</script>
-
+		<div ng-controller = "StoreController as store">
+			<h1>{{store.product.name}}</h1>
+			<h2>{{store.product.price}}</h2>
+			<p>{{store.product.description}}</p>
+		</div>
 	</body>
 </html>
