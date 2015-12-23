@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (function() {
   var app = angular.module('gemStore', []);
 
@@ -115,4 +116,17 @@
       }]
     }
   ];
+=======
+(function(){
+	var app = angular.module('store',[ ]);
+	app.controller('StoreController',function(){
+		this.product = gem;
+	});
+
+	var gem = {
+		name:'Dodecahedron',
+		price: 2.95,
+		description: '...',
+	}
+>>>>>>> e1cfb227335371037550e0daebc36fbeb938075f
 })();
